@@ -1,0 +1,26 @@
+<!-- directive : ngMousemove -->
+
+<!-- The ngMousemove directive allows you to specify custom behavior on mousemove event. -->
+
+<!-- usage : <ANY
+  ng-mousemove="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngMousemove</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    <button ng-mousemove="count = count + 1" ng-init="count=0"> move on button </button><br /><br />
+    <label>value : {{count}}</label>
+    
+</body>
+</html>

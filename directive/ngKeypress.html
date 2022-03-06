@@ -1,0 +1,28 @@
+<!-- directive : ngKeypress -->
+
+<!-- Specify custom behavior on keypress event. -->
+
+<!-- keypress event fired after keydown event-->
+
+<!-- usage : <ANY
+  ng-keypress="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngKeypress</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    <input type="text" ng-keypress="count = count + 1" ng-init="count=0">    <br /><br />
+    <label>value : {{count}}</label>
+    
+</body>
+</html>

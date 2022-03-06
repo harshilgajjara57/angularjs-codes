@@ -1,0 +1,33 @@
+<!-- directive : ngHide -->
+
+<!-- The ngHide directive shows or hides the given HTML element based on the expression provided to the ngHide attribute -->
+
+<!-- usage as element : <ng-hide
+  ng-hide="expression">
+...
+</ng-hide> -->
+
+<!-- usage as attribute : <ANY
+  ng-hide="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngHide</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    Hide : <input type="checkbox" ng-model="hideornot"><br /><br/>
+    <div ng-hide="hideornot">
+        This Element is Visible.
+    </div>
+    
+</body>
+</html>

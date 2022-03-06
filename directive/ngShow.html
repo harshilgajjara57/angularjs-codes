@@ -1,0 +1,33 @@
+<!-- directive : ngShow -->
+
+<!-- The ngShow directive shows or Shows the given HTML element based on the expression provided to the ngShow attribute -->
+
+<!-- usage as element : <ng-show
+  ng-show="expression">
+...
+</ng-show> -->
+
+<!-- usage as attribute : <ANY
+  ng-show="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngShow</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    Show : <input type="checkbox" ng-model="Showornot"><br /><br/>
+    <div ng-show="Showornot">
+        This Element is Visible.
+    </div>
+    
+</body>
+</html>

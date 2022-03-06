@@ -1,0 +1,26 @@
+<!-- directive : ngKeydown -->
+
+<!-- Specify custom behavior on keydown event. -->
+
+<!-- usage : <ANY
+  ng-keydown="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngKeydown</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    <input type="text" ng-keydown="count = count + 1" ng-init="count=0">    <br /><br />
+    <label>value : {{count}}</label>
+    
+</body>
+</html>

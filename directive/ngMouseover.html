@@ -1,0 +1,26 @@
+<!-- directive : ngMouseover -->
+
+<!-- The ngMouseover directive allows you to specify custom behavior on mouseover event. -->
+
+<!-- usage : <ANY
+  ng-mouseover="expression">
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngMouseover</title>
+    <script src="directiveScript.js"></script>
+    <script src="../script/angular.min.js"></script>
+</head>
+<body>
+    
+    <button ng-mouseover="count = count + 1" ng-init="count=0"> Add 1 in value </button><br /><br />
+    <label>value : {{count}}</label>
+    
+</body>
+</html>
