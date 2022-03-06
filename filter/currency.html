@@ -1,0 +1,36 @@
+<!-- filter : currency -->
+
+<!-- Formats a number as a currency (ie $1,234.56). When no currency symbol is provided, default symbol for current locale is used. -->
+
+<!-- html template binding syntax : {{ currency_expression | currency : symbol : fractionSize}} -->
+
+<!-- javascript syntax : $filter('currency')(amount, symbol, fractionSize) -->
+
+<!-- return string as formatted number -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter : currency</title>
+    <!-- Test Number : 1550089 -->
+</head>
+
+<body>
+    <div>
+        <!-- input field to enter currency -->
+        <input type="text" ng-model="currencyNumber"><br />
+        <!-- default currency format ('$') -->
+        default currency format : {{ currencyNumber | currency}}<br />
+        <!-- custom currency format as ('USD$')-->
+        custom currency format : {{ currencyNumber | currency:"USD$"}}<br />
+        <!-- custom currency format as ('USD$') with 0 fractions -->
+        custom currency format with 0 fractions : {{ currencyNumber | currency:"USD$":0}}<br />
+    </div>
+    <script src="../script/angular.min.js"></script>
+</body>
+
+</html>

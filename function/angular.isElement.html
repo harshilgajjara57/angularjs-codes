@@ -1,0 +1,36 @@
+<!-- function : angular.isElement -->
+
+<!-- Determines if a reference is a DOM element (or wrapped jQuery element). -->
+
+<!-- usage : angular.isElement(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isElement</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isElementController">
+        <!-- passing array & string & dom element in isElement function to check if it dom element or not. -->
+
+        <!-- passing date -->
+        {{demodate}} : {{isElementCheck(demodate)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isElementCheck(demostring)}}<br />
+
+        <!-- passing dom -->
+        \{\{demoElement}} : {{isElementCheck(demoElement)}}<br />
+
+        <button id="myButton">This is Demo Button</button>
+    </div>
+</body>
+
+</html>

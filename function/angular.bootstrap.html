@@ -1,0 +1,35 @@
+<!-- function : angular.bootstrap -->
+
+<!-- Use this function to manually start up AngularJS application.
+
+AngularJS will detect if it has been loaded into the browser more than once and only allow the first loaded script to be bootstrapped and will report a warning to the browser console for each of the subsequent scripts. This prevents strange results in applications, where otherwise multiple instances of AngularJS try to work on the DOM.
+
+Note: Protractor based end-to-end tests cannot use this function to bootstrap manually. They must use ngApp. -->
+
+<!-- usage : angular.bootstrap(element, [modules], [config]); -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.bootstrap</title>
+    <script src="../script/angular.min.js"></script>
+
+    <!-- angular.bootstrap function added here -->
+    <script src="bootstrapexample.js"></script>
+    
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularBootstrapController">
+
+        {{message}}
+       
+    </div>
+</body>
+
+</html>

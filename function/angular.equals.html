@@ -1,0 +1,49 @@
+<!-- function : angular.equals -->
+
+<!-- Determines if two objects or two values are equivalent. Supports value types, regular expressions, arrays and objects.
+
+Two objects or values are considered equivalent if at least one of the following is true:
+
+Both objects or values pass === comparison.
+Both objects or values are of the same type and all of their properties are equal by comparing them with angular.equals.
+Both values are NaN. (In JavaScript, NaN == NaN => false. But we consider two NaN as equal)
+Both values represent the same regular expression (In JavaScript, /abc/ == /abc/ => false. But we consider two regular expressions as equal when their textual representation matches).
+During a property comparison, properties of function type and properties with names that begin with $ are ignored.
+
+Scope and DOMWindow objects are being compared only by identify (===). -->
+
+<!-- usage : angular.equals(o1, o2); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.equals</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularEqualsController">
+
+        <h3>A : </h3>
+        Name: <input type="text" ng-model="userA.name"><br/>
+        Age: <input type="number" ng-model="userA.age"><br/><br/>
+    
+        <h3>B : </h3>
+        Name: <input type="text" ng-model="userB.name"><br/>
+        Age: <input type="number" ng-model="userB.age"><br/><br/>
+
+        <input type="button" value="Compare" ng-click="compareAB()"><br/><br/>
+        
+        User 1: <pre>{{userA | json}}</pre><br/>
+        User 2: <pre>{{userB | json}}</pre><br/>
+        Equal: <pre>{{result}}</pre>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!-- function : angular.extend -->
+
+<!-- Extends the destination object dst by copying own enumerable properties from the src object(s) to dst. You can specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object as the target: var object = angular.extend({}, object1, object2).
+
+Note: Keep in mind that angular.extend does not support recursive merge (deep copy). Use angular.merge for this. -->
+
+<!-- usage : angular.extend(dst, src); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.extend</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularExtendController">
+        
+        {{userA}}<br />
+        {{userB}}<br /><br />
+        {{userC}}
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!-- function : angular.isNumber -->
+
+<!-- Determines if a reference is a Number.
+This includes the "special" numbers NaN, +Infinity and -Infinity.
+If you wish to exclude these then you can use the native `isFinite' method. -->
+
+<!-- usage : angular.isNumber(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isNumber</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isNumberController">
+        <!-- passing array & string & number in isNumber function to check if it is number or not. -->
+
+        <!-- passing array -->
+        {{demoarray}} : {{isNumberCheck(demoarray)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isNumberCheck(demostring)}}<br />
+
+        <!-- passing number -->
+        {{demonumber}} : {{isNumberCheck(demonumber)}}
+
+    </div>
+</body>
+
+</html>

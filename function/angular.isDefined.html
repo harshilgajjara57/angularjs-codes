@@ -1,0 +1,40 @@
+<!-- function : angular.isDefined -->
+
+<!-- Determines if a reference is defined. -->
+
+<!-- usage : angular.isDefined(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isDefined</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isDefinedController">
+        <!-- passing date & string & empty initialized var & uninitialized var & undefined var in isDefined function to check if the value is defined or not.(var is initialized or not.) -->
+
+        <!-- passing date -->
+        {{demodate}} : {{isDefinedCheck(demodate)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isDefinedCheck(demostring)}}<br />
+
+        <!-- empty initialized var -->
+        \{\{demoemptyIni}} : {{isDefinedCheck(demoemptyIni)}}<br />
+
+        <!-- uninitialized var -->
+        \{\{demounIni}} : {{isDefinedCheck(demounIni)}}<br />
+
+        <!-- undefined var -->
+        \{\{undefvar}} : {{isDefinedCheck(undefvar)}}
+    </div>
+</body>
+
+</html>

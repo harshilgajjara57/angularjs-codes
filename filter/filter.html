@@ -1,0 +1,96 @@
+<!-- filter : filter -->
+
+<!-- Selects a subset of items from array and returns it as a new array. -->
+
+<!-- html template binding syntax : {{ filter_expression | filter : expression : comparator : anyPropertyKey}} -->
+
+<!-- javascript syntax : $filter('filter')(array, expression, comparator, anyPropertyKey) -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter : filter</title>
+    <style>
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- customers data in array of object as customers -->
+    <div ng-init="customers = [
+            {firstname:'harshil',lastname:'gajjar',gender:'male',age:'22',salary:'10000'},
+            {firstname:'harshil',lastname:'gajjar',gender:'male',age:'22',salary:'10000'},
+            {firstname:'jaimin',lastname:'patel',gender:'male',age:'21',salary:'10000'},
+            {firstname:'shubham',lastname:'jethva',gender:'male',age:'20',salary:'3000'},
+            {firstname:'pratham',lastname:'chauhan',gender:'male',age:'23',salary:'15000'},
+            {firstname:'kajal',lastname:'shah',gender:'female',age:'25',salary:'11000'}
+        ]"></div>
+
+    <!-- search data using filter -->
+    <label>Search By : </label><input type="text" ng-model="searchBy"><br /><br />
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- applying filter to search data -->
+            <tr ng-repeat="customer in customers | filter:searchBy">
+                <td>{{ customer.firstname }}</td>
+                <td>{{ customer.lastname }}</td>
+                <td>{{ customer.gender }}</td>
+                <td>{{ customer.age }}</td>
+                <td>{{ customer.salary }}</td>
+            </tr>
+        </tbody>
+    </table><br /><br />
+
+    <!-- search in all fields -->
+    <label>Search By Any : </label><input type="text" ng-model="search.$"><br /><br />
+    <!-- only search in firstname field -->
+    <label>Search By Firstname : </label><input type="text" ng-model="search.firstname"><br /><br />
+    <!-- only search in lastname field -->
+    <label>Search By Lastname : </label><input type="text" ng-model="search.lastname"><br /><br />
+    <!-- only search in gender field -->
+    <label>Search By Gender : </label><input type="text" ng-model="search.gender"><br /><br />
+    <!-- only search in age field -->
+    <label>Search By Age : </label><input type="text" ng-model="search.age"><br /><br />
+    <!-- only search in salary field -->
+    <label>Search By Salary : </label><input type="text" ng-model="search.salary"><br /><br />
+    <!-- strict checking of data -->
+    <label>Equality strict</label> : <input type="checkbox" ng-model="strict"><br /><br />
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="customerobj in customers | filter:search:strict">
+                <td>{{ customerobj.firstname.toString() }}</td>
+                <td>{{ customerobj.lastname.toString() }}</td>
+                <td>{{ customerobj.gender.toString() }}</td>
+                <td>{{ customerobj.age.toString() }}</td>
+                <td>{{ customerobj.salary.toString() }}</td>
+            </tr>
+        </tbody>
+
+        <script src="../script/angular.min.js"></script>
+</body>
+
+</html>

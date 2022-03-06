@@ -1,0 +1,30 @@
+<!-- function : angular.forEach -->
+
+<!-- Invokes the iterator function once for each item in obj collection, which can be either an object or an array. The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself. Specifying a context for the function is optional. -->
+
+<!-- It is worth noting that .forEach does not iterate over inherited properties because it filters using the hasOwnProperty method. -->
+
+<!-- usage : angular.forEach(obj, iterator, [context]); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.forEach</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularForEachController">
+        <!-- also use ng-non-bindable directive instead of \ to print {{ firstLastNames }} -->
+        \{\{ firstLastNames }} : {{ firstLastNames }}<br />
+        \{\{ fullNames }} : {{ fullNames }}
+
+    </div>
+</body>
+
+</html>

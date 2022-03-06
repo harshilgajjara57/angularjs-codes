@@ -1,0 +1,12 @@
+function
+
+angular.UNSAFE_restoreLegacyJqLiteXHTMLReplacement
+angular.element
+angular.errorHandlingConfig
+angular.fromJson
+angular.identity
+angular.injector
+angular.module
+angular.noop
+angular.reloadWithDebugInfo
+angular.toJson

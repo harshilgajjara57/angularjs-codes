@@ -1,0 +1,31 @@
+<!-- filter : json -->
+
+<!-- Allows you to convert a JavaScript object into JSON string. -->
+
+<!-- This filter is mostly useful for debugging. When using the double curly notation the binding is automatically converted to JSON. -->
+
+<!-- html template binding syntax : {{ json_expression | json : spacing}} -->
+
+<!-- javascript syntax : $filter('json')(object, spacing) -->
+
+<!-- return json string -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter : json</title>
+</head>
+
+<body>
+    <div>
+        <pre>{{ {'name':'value'} | json }}</pre>
+        <pre>{{ {'name':'value'} | json:4 }}</pre>
+    </div>
+    <script src="../script/angular.min.js"></script>
+</body>
+
+</html>

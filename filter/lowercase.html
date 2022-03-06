@@ -1,0 +1,31 @@
+<!-- filter : lowercase -->
+
+<!-- convert string to lowercase. -->
+
+<!-- html template binding syntax : {{ lowercase_expression | lowercase}} -->
+
+<!-- javascript syntax : $filter('lowercase')() -->
+
+<!-- return string in lowercase. -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter : lowercase</title>
+</head>
+
+<body>
+    <div>
+        <!-- input field to enter text -->
+        <input type="text" ng-model="demoText"><br /><br />
+        <!-- applying text into lowercase -->
+        Text in Lowercase : {{ demoText | lowercase}}
+    </div>
+    <script src="../script/angular.min.js"></script>
+</body>
+
+</html>

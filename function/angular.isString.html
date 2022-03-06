@@ -1,0 +1,32 @@
+<!-- function : angular.isString -->
+
+<!-- Determines if a reference is a String. -->
+
+<!-- usage : angular.isString(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isString</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isStringController">
+        <!-- passing array & string in isString function to check if it is String or not. -->
+
+        <!-- passing array -->
+        {{demoarray}} : {{isStringCheck(demoarray)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isStringCheck(demostring)}}<br />
+
+    </div>
+</body>
+
+</html>

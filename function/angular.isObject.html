@@ -1,0 +1,35 @@
+<!-- function : angular.isObject -->
+
+<!-- Determines if a reference is an Object. Unlike typeof in JavaScript, nulls are not considered to be objects. Note that JavaScript arrays are objects. -->
+
+<!-- usage : angular.isObject(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isObject</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isObjectController">
+        <!-- passing array & string & object in isObject function to check if it is object or not. -->
+
+        <!-- passing array -->
+        {{demoarray}} : {{isObjectCheck(demoarray)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isObjectCheck(demostring)}}<br />
+
+        <!-- passing object -->
+        {{demoobject}} : {{isObjectCheck(demoobject)}}
+
+    </div>
+</body>
+
+</html>

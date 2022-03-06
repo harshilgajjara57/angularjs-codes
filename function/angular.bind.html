@@ -1,0 +1,28 @@
+<!-- function : angular.bind -->
+
+<!-- Returns a function which calls function fn bound to self (self becomes the this for fn). You can supply optional args that are prebound to the function. This feature is also known as partial application, as distinguished from function currying. -->
+
+<!-- usage : angular.bind(self, fn, args); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.bind</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularBindController">
+
+        <input type="number" ng-model="num" ng-change="bindDemo()" />
+         <br>Sum = {{Add}}
+
+    </div>
+</body>
+
+</html>

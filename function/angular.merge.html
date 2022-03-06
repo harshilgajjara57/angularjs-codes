@@ -1,0 +1,32 @@
+<!-- function : angular.merge -->
+
+<!-- Deeply extends the destination object dst by copying own enumerable properties from the src object(s) to dst. You can specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object as the target: var object = angular.merge({}, object1, object2).
+
+Unlike extend(), merge() recursively descends into object properties of source objects, performing a deep copy. -->
+
+<!-- usage : angular.merge(dst, src); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.merge</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="angularMergeController">
+        
+        object1 : {{obj1}}
+        <br />
+        object2 :{{obj2}}
+        <br />
+        combined object merged ( obj1 + obj2 ) : {{obj}}
+    </div>
+</body>
+
+</html>

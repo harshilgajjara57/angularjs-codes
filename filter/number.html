@@ -1,0 +1,43 @@
+<!-- filter : number -->
+
+<!-- Formats a number as text. -->
+
+<!-- If the input is null or undefined, it will just be returned. If the input is infinite (Infinity or -Infinity), the Infinity symbol '∞' or '-∞' is returned, respectively. If the input is not a number an empty string is returned. -->
+
+<!-- html template binding syntax : {{ number_expression | number : fractionSize}} -->
+
+<!-- javascript syntax : $filter('number')(number, fractionSize) -->
+
+<!-- return string - Number rounded to fractionSize appropriately formatted based on the current locale (e.g., in the en_US locale it will have "." as the decimal separator and include "," group separators after each third digit). -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter : number</title>
+</head>
+
+<body>
+    <div>
+        <!-- input field to enter number. -->
+        <input type="text" ng-model="num"><br /><br />
+
+        <!-- default number format. -->
+        default format : {{ num | number }}<br />
+
+        <!-- number format with 0 fractions. -->
+        number with 0 fractions : {{ num | number:0 }}<br />
+
+        <!-- number format with 4 fractions. -->
+        number with 4 fractions : {{ num | number:4 }}<br />
+
+        <!-- negative number with 2 fractions. -->
+        negative number with 2 fractions : {{ -num | number:2 }}
+    </div>
+    <script src="../script/angular.min.js"></script>
+</body>
+
+</html>

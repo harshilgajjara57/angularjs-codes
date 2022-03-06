@@ -1,0 +1,40 @@
+<!-- function : angular.isUndefined -->
+
+<!-- Determines if a reference is undefined. -->
+
+<!-- usage : angular.isUndefined(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isUndefined</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isUndefinedController">
+        <!-- passing date & string & empty initialized var & uninitialized var & undefined var in isUndefined function to check if the value is undefined or not.(var is initialized or not.) -->
+
+        <!-- passing date -->
+        {{demodate}} : {{isUndefinedCheck(demodate)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{isUndefinedCheck(demostring)}}<br />
+
+        <!-- empty initialized var -->
+        \{\{demoemptyIni}} : {{isUndefinedCheck(demoemptyIni)}}<br />
+
+        <!-- uninitialized var -->
+        \{\{demounIni}} : {{isUndefinedCheck(demounIni)}}<br />
+
+        <!-- undefined var -->
+        \{\{undefvar}} : {{isUndefinedCheck(undefvar)}}
+    </div>
+</body>
+
+</html>

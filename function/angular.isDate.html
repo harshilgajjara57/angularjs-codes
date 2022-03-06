@@ -1,0 +1,31 @@
+<!-- function : angular.isDate -->
+
+<!-- Determines if a reference is an date. -->
+
+<!-- usage : angular.isDate(value); -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="functions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function : angular.isDate</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="functionScript.js"></script>
+</head>
+
+<body>
+    <div ng-controller="isDateController">
+        <!-- passing date & string in isDate function to check if it is date or not. -->
+
+        <!-- passing date -->
+        {{demodate}} : {{dateCheck(demodate)}}<br />
+
+        <!-- passing string -->
+        {{demostring}} : {{dateCheck(demostring)}}
+    </div>
+</body>
+
+</html>
