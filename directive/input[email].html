@@ -1,0 +1,49 @@
+<!-- directive : input[email] -->
+
+<!-- Text input with email validation. Sets the email validation error key if not a valid email address. -->
+
+<!-- usage : <input type="email"
+       ng-model="string"
+       [name="string"]
+       [required="string"]
+       [ng-required="string"]
+       [ng-minlength="number"]
+       [ng-maxlength="number"]
+       [pattern="string"]
+       [ng-pattern="string"]
+       [ng-change="string"]> -->
+
+       <!DOCTYPE html>
+       <html lang="en" ng-app="directives">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>directive : input[email] </title>
+           <script src="../script/angular.min.js"></script>
+           <script src="directiveScript.js"></script>
+             
+       </head>
+       <body>
+           
+        <form name="myForm" ng-controller="inputEmailController">
+            <label>Email:
+              <input type="email" name="input" ng-model="email.text" required>
+            </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                Required!</span>
+              <span class="error" ng-show="myForm.input.$error.email">
+                Not valid email!</span>
+            </div>
+            <p>text = {{email.text}}</p><br/>
+            <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+            <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+            <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+            <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+            <p>myForm.$error.email = {{!!myForm.$error.email}}</p><br/>
+          </form>  
+           
+       
+       </body>
+       </html>

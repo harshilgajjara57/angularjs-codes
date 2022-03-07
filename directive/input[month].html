@@ -1,0 +1,52 @@
+<!-- directive : input[month] -->
+
+<!-- Input with month validation and transformation. In browsers that do not yet support the HTML5 month input, a text element will be used. In that case, the text must be entered in a valid ISO-8601 month format (yyyy-MM), for example: 2009-01.
+
+The model must always be a Date object, otherwise AngularJS will throw an error. Invalid Date objects (dates whose getTime() is NaN) will be rendered as an empty string. If the model is not set to the first of the month, the next view to model update will set it to the first of the month.
+
+The timezone to be used to read/write the Date instance in the model can be defined using ngModelOptions. By default, this is the timezone of the browser. -->
+
+<!-- usage : <input type="month"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]> -->
+
+       <!DOCTYPE html>
+       <html lang="en" ng-app="directives">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>directive : input[month] </title>
+           <script src="../script/angular.min.js"></script>
+           <script src="directiveScript.js"></script>
+             
+       </head>
+       <body>
+           
+        <form name="myForm" ng-controller="inputMonthController as dateCtrl">
+            <label for="exampleInput">Pick a month in 2013:</label>
+            <input id="exampleInput" type="month" name="input" ng-model="example.value"
+               placeholder="yyyy-MM" min="2013-01" max="2013-12" required />
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                 Required!</span>
+              <span class="error" ng-show="myForm.input.$error.month">
+                 Not a valid month!</span>
+            </div>
+            <p>value = {{example.value | date: "yyyy-MM"}}</p><br/>
+            <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+            <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+            <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+            <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+          </form> 
+           
+       
+       </body>
+       </html>

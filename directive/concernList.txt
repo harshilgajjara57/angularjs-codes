@@ -1,14 +1,5 @@
 directives
 
-form
-input
-input[checkbox]
-input[date]
-input[datetime-local]
-input[email]
-input[month]
-input[number]
-input[radio]
 input[range]
 input[text]
 input[time]

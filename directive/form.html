@@ -1,0 +1,48 @@
+<!-- directive : form -->
+
+<!-- Directive that instantiates FormController.
+
+If the name attribute is specified, the form controller is published onto the current scope under this name. -->
+
+<!-- In AngularJS, forms can be nested. This means that the outer form is valid when all of the child forms are valid as well. However, browsers do not allow nesting of <form> elements, so AngularJS provides the ngForm directive, which behaves identically to form but can be nested. Nested forms can be useful, for example, if the validity of a sub-group of controls needs to be determined. -->
+
+<!-- usage : <form
+  [name="string"]>
+...
+</form> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : form</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+      <style>
+       .my-form {
+         transition:all linear 0.5s;
+         background: transparent;
+       }
+       .my-form.ng-invalid {
+         background: red;
+       }
+      </style>
+</head>
+<body>
+    
+    
+    <form name="myForm" ng-controller="formController" class="my-form">
+        userType: <input name="input" ng-model="userType" required>
+        <span class="error" ng-show="myForm.input.$error.required">Required!</span><br />
+        <p>userType = {{userType}}</p><br />
+        <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br />
+        <p>myForm.input.$error = {{myForm.input.$error}}</p><br />
+        <p>myForm.$valid = {{myForm.$valid}}</p><br />
+        <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br />
+       </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- directive : input[checkbox] -->
+
+<!-- HTML checkbox. -->
+
+<!-- usage : <input type="checkbox"
+       ng-model="string"
+       [name="string"]
+       [ng-true-value="expression"]
+       [ng-false-value="expression"]
+       [ng-change="string"]> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : input[checkbox] </title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+      
+</head>
+<body>
+    
+    <form name="myForm" ng-controller="inputCheckboxController">
+        <label>Value1 :
+          <input type="checkbox" ng-model="checkboxModel.value1">
+        </label><br/>
+        <label>Value2 :
+          <input type="checkbox" ng-model="checkboxModel.value2"
+                 ng-true-value="'YES'" ng-false-value="'NO'">
+         </label><br/>
+        <p>value1 = {{checkboxModel.value1}}</p>
+        <p>value2 = {{checkboxModel.value2}}</p>    
+    </form>
+
+</body>
+</html>

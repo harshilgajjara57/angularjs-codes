@@ -1,0 +1,54 @@
+<!-- directive : input[datetime-local] -->
+
+<!-- Input with datetime validation and transformation. In browsers that do not yet support the HTML5 date input, a text element will be used. In that case, the text must be entered in a valid ISO-8601 local datetime format (yyyy-MM-ddTHH:mm:ss), for example: 2010-12-28T14:57:00.
+
+The model must always be a Date object, otherwise AngularJS will throw an error. Invalid Date objects (dates whose getTime() is NaN) will be rendered as an empty string.
+
+The timezone to be used to read/write the Date instance in the model can be defined using ngModelOptions. By default, this is the timezone of the browser.
+
+The format of the displayed time can be adjusted with the ngModelOptions timeSecondsFormat and timeStripZeroSeconds. -->
+
+<!-- usage : <input type="datetime-local"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]> -->
+
+       <!DOCTYPE html>
+       <html lang="en" ng-app="directives">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>directive : input[datetime-local] </title>
+           <script src="../script/angular.min.js"></script>
+           <script src="directiveScript.js"></script>
+             
+       </head>
+       <body>
+           
+        <form name="myForm" ng-controller="inputDatetimeLocalController as dateCtrl">
+            <label for="exampleInput">Pick a date between in 2013:</label>
+            <input type="datetime-local" id="exampleInput" name="input" ng-model="example.value"
+                placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                  Required!</span>
+              <span class="error" ng-show="myForm.input.$error.datetimelocal">
+                  Not a valid date!</span>
+            </div>
+            <p>value = {{example.value | date: "yyyy-MM-ddTHH:mm:ss"}}</p><br/>
+            <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+            <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+            <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+            <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+          </form>
+           
+       
+       </body>
+       </html>

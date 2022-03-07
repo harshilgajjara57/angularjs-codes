@@ -1,0 +1,67 @@
+<!-- directive : input -->
+
+<!-- HTML input element control. When used together with ngModel, it provides data-binding, input state control, and validation. Input control follows HTML5 input types and polyfills the HTML5 validation behavior for older browsers. -->
+
+<!-- usage : <input
+  ng-model="string"
+  [name="string"]
+  [required="string"]
+  [ng-required="boolean"]
+  [ng-minlength="number"]
+  [ng-maxlength="number"]
+  [ng-pattern="string"]
+  [ng-change="string"]
+  [ng-trim="boolean"]>
+...
+</input> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : input </title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+      
+</head>
+<body>
+    
+     <div ng-controller="inputController">
+       <form name="myForm">
+         <label>
+            User name:
+            <input type="text" name="userName" ng-model="user.name" required>
+         </label>
+         <div role="alert">
+           <span ng-show="myForm.userName.$error.required">
+            Required!</span>
+         </div>
+         <label>
+            Last name:
+            <input type="text" name="lastName" ng-model="user.last"
+            ng-minlength="3" ng-maxlength="10">
+         </label>
+         <div role="alert">
+           <span ng-show="myForm.lastName.$error.minlength">
+             Too short!</span>
+           <span ng-show="myForm.lastName.$error.maxlength">
+             Too long!</span>
+         </div>
+       </form>
+       <hr>
+       <p>user = {{user}}</p><br/>
+       <p>myForm.userName.$valid = {{myForm.userName.$valid}}</p><br/>
+       <p>myForm.userName.$error = {{myForm.userName.$error}}</p><br/>
+       <p>myForm.lastName.$valid = {{myForm.lastName.$valid}}</p><br/>
+       <p>myForm.lastName.$error = {{myForm.lastName.$error}}</p><br/>
+       <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+       <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+       <p>myForm.$error.minlength = {{!!myForm.$error.minlength}}</p><br/>
+       <p>myForm.$error.maxlength = {{!!myForm.$error.maxlength}}</p><br/>
+     </div>
+    
+
+</body>
+</html>

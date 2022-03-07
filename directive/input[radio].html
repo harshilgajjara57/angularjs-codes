@@ -1,0 +1,43 @@
+<!-- directive : input[radio] -->
+
+<!-- HTML radio button. -->
+
+<!-- usage : <input type="radio"
+       ng-model="string"
+       value="string"
+       [name="string"]
+       [ng-change="string"]
+       ng-value="string"> -->
+
+       <!DOCTYPE html>
+       <html lang="en" ng-app="directives">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>directive : input[radio] </title>
+           <script src="../script/angular.min.js"></script>
+           <script src="directiveScript.js"></script>
+             
+       </head>
+       <body>
+           
+        <form name="myForm" ng-controller="inputRadioController">
+            <label>
+              <input type="radio" ng-model="color.name" value="red">
+              Red
+            </label><br/>
+            <label>
+              <input type="radio" ng-model="color.name" ng-value="specialValue">
+              Green
+            </label><br/>
+            <label>
+              <input type="radio" ng-model="color.name" value="blue">
+              Blue
+            </label><br/>
+            <p>color = {{color.name | json}}</p><br/>
+           </form>
+           
+       
+       </body>
+       </html>
