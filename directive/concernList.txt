@@ -27,7 +27,6 @@ ngCopy
 ngCsp
 ngCut
 ngDblclick
-ngDisabled
 ngFocus
 ngForm
 ngHref
@@ -52,8 +51,6 @@ ngRef
 ngRepeat
 ngRequired
 ngSelected
-ngSrc
-ngSrcset
 ngStyle
 ngSubmit
 ngSwitch

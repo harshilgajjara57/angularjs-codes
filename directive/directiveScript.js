@@ -30,3 +30,13 @@ myApp.controller('ngInitController', ['$scope', function ($scope) {
     }
 
 }]);
+
+
+
+// controller for ngSrc & ngSrcset
+myApp.controller('ngSrcController', ['$scope', function ($scope) {
+    
+    $scope.imgLink = "https://images.unsplash.com/photo-1644907961094-8852aca773d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80";
+
+
+}]);

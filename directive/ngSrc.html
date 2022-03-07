@@ -1,0 +1,30 @@
+<!-- directive : ngSrc -->
+
+<!-- Using AngularJS markup like {{hash}} in a src attribute doesn't work right: The browser will fetch from the URL with the literal text {{hash}} until AngularJS replaces the expression inside {{hash}}. The ngSrc directive solves this problem. -->
+
+<!-- usage as attribute : <IMG
+  ng-src="template">
+...
+</IMG> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngSrc</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+</head>
+<body>
+<div ng-controller="ngSrcController">
+
+    <p>with src it will throw err </p>
+    <img src="{{imgLink}}" width="100" height="100"><br /><br />
+    <img ng-src="{{imgLink}}" width="100" height="100">
+    
+</div>
+
+</body>
+</html>

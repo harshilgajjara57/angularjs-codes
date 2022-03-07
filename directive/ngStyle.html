@@ -1,0 +1,31 @@
+<!-- directive : ngStyle -->
+
+<!-- The ngStyle directive allows you to set CSS style on an HTML element conditionally. -->
+
+<!-- usage as attribute : <ANY
+  ng-style="expression">
+...
+</ANY> -->
+
+<!-- usage with class : <ANY class="ng-style: expression;"> ... </ANY>-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngSrc</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+</head>
+<body>
+
+    <input type="button" value="set color" ng-click="myStyle={color:'red'}">
+    <input type="button" value="set background" ng-click="myStyle={'background-color':'blue',color:'white'}">
+    <input type="button" value="clear" ng-click="myStyle={}"><br /><br />
+    <p ng-style="myStyle">simple text</p><br /><br />
+    <pre>myStyle={{myStyle}}</pre>
+
+</body>
+</html>
