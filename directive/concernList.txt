@@ -17,16 +17,12 @@ input[week]
 ngApp
 ngBindHtml
 ngBindTemplate
-ngBlur
 ngClass
 ngClassEven
 ngClassOdd
 ngCloak
 ngController
-ngCopy
 ngCsp
-ngCut
-ngDblclick
 ngFocus
 ngForm
 ngHref
@@ -51,7 +47,6 @@ ngRef
 ngRepeat
 ngRequired
 ngSelected
-ngStyle
 ngSubmit
 ngSwitch
 ngTransclude

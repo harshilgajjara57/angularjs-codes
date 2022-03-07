@@ -1,0 +1,27 @@
+<!-- directive : ngDblclick -->
+
+<!-- The ngDblclick directive allows you to specify custom behavior on a dblclick event. -->
+
+<!-- usage as attribute : <ANY
+  ng-dblclick="expression">
+...
+</ANY> -->
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngDblclick</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+</head>
+<body>
+
+    <button ng-dblclick="count = count + 1" ng-init="count=0">double click me</button><br />
+    double clicked : {{count}}
+
+</body>
+</html>
