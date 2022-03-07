@@ -1,9 +1,8 @@
 directives
 
-ngApp
 ngBindHtml
-ngBindTemplate
 ngClass
+
 ngClassEven
 ngClassOdd
 ngCloak

@@ -1,0 +1,39 @@
+<!-- directive : ngApp -->
+
+<!-- Use this directive to auto-bootstrap an AngularJS application. The ngApp directive designates the root element of the application and is typically placed near the root element of the page - e.g. on the <body> or <html> tags.
+
+    There are a few things to keep in mind when using ngApp:
+    
+    only one AngularJS application can be auto-bootstrapped per HTML document. The first ngApp found in the document will be used to define the root element to auto-bootstrap as an application. To run multiple applications in an HTML document you must manually bootstrap them using angular.bootstrap instead.
+    AngularJS applications cannot be nested within each other.
+    Do not use a directive that uses transclusion on the same element as ngApp. This includes directives such as ngIf, ngInclude and ngView. Doing this misplaces the app $rootElement and the app's injector, causing animations to stop working and making the injector inaccessible from outside the app. -->
+
+<!-- usage as element : <ng-app
+  ng-app="angular.Module"
+  [ng-strict-di="boolean"]>
+...
+</ng-app> -->
+
+<!-- usage as attribute : <ANY
+  ng-app="angular.Module"
+  [ng-strict-di="boolean"]>
+...
+</ANY> -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive : ngApp</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="directiveScript.js"></script>
+</head>
+<body>
+    <div ng-controller="ngAppController">
+        I can add: {{a}} + {{b}} =  {{ a+b }}
+      </div>
+</div>
+</body>
+</html>

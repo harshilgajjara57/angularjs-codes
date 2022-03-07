@@ -175,5 +175,21 @@ myApp.controller('inputTextController', ['$scope', function($scope) {
     $scope.example = {
       value: new Date(2013, 0, 3)
     };
-    
+
+  }]);
+
+
+  //controller for ngAppController
+  myApp.controller('ngAppController', function($scope) {
+    $scope.a = 1;
+    $scope.b = 2;
+  });
+
+
+  //controller for ngBindTemplate
+myApp.controller('ngBindTemplateController', ['$scope', function($scope) {
+
+    $scope.salutation = 'Hello';
+    $scope.name = 'World';
+
   }]);
