@@ -1,0 +1,51 @@
+    <!-- directive : input[text] -->
+
+    <!-- Standard HTML text input with AngularJS data binding, inherited by most of the input elements -->
+
+<!-- usage : <input type="text"
+       ng-model="string"
+       [name="string"]
+       [required="string"]
+       [ng-required="string"]
+       [ng-minlength="number"]
+       [ng-maxlength="number"]
+       [pattern="string"]
+       [ng-pattern="string"]
+       [ng-change="string"]
+       [ng-trim="boolean"]>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en" ng-app="directives">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>directive : input[text] </title>
+     <script src="../script/angular.min.js"></script>
+     <script src="directiveScript.js"></script>
+       
+ </head>
+ <body>
+     
+    <form name="myForm" ng-controller="inputTextController">
+        <label>Single word:
+          <input type="text" name="input" ng-model="example.text"
+                 ng-pattern="example.word" required ng-trim="false">
+        </label>
+        <div role="alert">
+          <span class="error" ng-show="myForm.input.$error.required">
+            Required!</span>
+          <span class="error" ng-show="myForm.input.$error.pattern">
+            Single word only!</span>
+        </div>
+        <code>text = {{example.text}}</code><br/>
+        <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br/>
+        <code>myForm.input.$error = {{myForm.input.$error}}</code><br/>
+        <code>myForm.$valid = {{myForm.$valid}}</code><br/>
+        <code>myForm.$error.required = {{!!myForm.$error.required}}</code><br/>
+       </form>
+     
+ 
+ </body>
+ </html>

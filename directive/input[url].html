@@ -1,0 +1,50 @@
+    <!-- directive : input[url] -->
+
+    <!-- Text input with URL validation. Sets the url validation error key if the content is not a valid URL. -->
+
+<!-- usage : <input type="url"
+       ng-model="string"
+       [name="string"]
+       [required="string"]
+       [ng-required="string"]
+       [ng-minlength="number"]
+       [ng-maxlength="number"]
+       [pattern="string"]
+       [ng-pattern="string"]
+       [ng-change="string"]>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en" ng-app="directives">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>directive : input[url] </title>
+     <script src="../script/angular.min.js"></script>
+     <script src="directiveScript.js"></script>
+       
+ </head>
+ <body>
+     
+    <form name="myForm" ng-controller="inputUrlController">
+        <label>URL:
+          <input type="url" name="input" ng-model="url.text" required>
+        <label>
+        <div role="alert">
+          <span class="error" ng-show="myForm.input.$error.required">
+            Required!</span>
+          <span class="error" ng-show="myForm.input.$error.url">
+            Not valid url!</span>
+        </div>
+        <p>text = {{url.text}}</p><br/>
+        <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+        <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+        <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+        <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+        <p>myForm.$error.url = {{!!myForm.$error.url}}</p><br/>
+       </form>
+     
+ 
+ </body>
+ </html>

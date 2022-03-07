@@ -1,0 +1,55 @@
+    <!-- directive : input[time] -->
+
+    <!-- Input with time validation and transformation. In browsers that do not yet support the HTML5 time input, a text element will be used. In that case, the text must be entered in a valid ISO-8601 local time format (HH:mm:ss), for example: 14:57:00. Model must be a Date object. This binding will always output a Date object to the model of January 1, 1970, or local date new Date(1970, 0, 1, HH, mm, ss).
+
+The model must always be a Date object, otherwise AngularJS will throw an error. Invalid Date objects (dates whose getTime() is NaN) will be rendered as an empty string.
+
+The timezone to be used to read/write the Date instance in the model can be defined using ngModelOptions. By default, this is the timezone of the browser.
+
+The format of the displayed time can be adjusted with the ngModelOptions timeSecondsFormat and timeStripZeroSeconds. -->
+
+<!-- usage : <input type="time"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en" ng-app="directives">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>directive : input[time] </title>
+     <script src="../script/angular.min.js"></script>
+     <script src="directiveScript.js"></script>
+       
+ </head>
+ <body>
+     
+    <form name="myForm" ng-controller="inputTimeController as dateCtrl">
+        <label for="exampleInput">Pick a time between 8am and 5pm:</label>
+        <input type="time" id="exampleInput" name="input" ng-model="example.value"
+            placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required />
+        <div role="alert">
+          <span class="error" ng-show="myForm.input.$error.required">
+              Required!</span>
+          <span class="error" ng-show="myForm.input.$error.time">
+              Not a valid date!</span>
+        </div>
+        <p>value = {{example.value | date: "HH:mm:ss"}}</p><br/>
+        <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+        <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+        <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+        <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+     </form>
+     
+ 
+ </body>
+ </html>

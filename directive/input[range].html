@@ -1,0 +1,42 @@
+<!-- directive : input[range] -->
+
+<!-- Native range input with validation and transformation. -->
+
+<!-- usage : <input type="range"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [step="string"]
+       [ng-change="expression"]
+       [ng-checked="expression"]>
+ -->
+
+       <!DOCTYPE html>
+       <html lang="en" ng-app="directives">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>directive : input[range] </title>
+           <script src="../script/angular.min.js"></script>
+           <script src="directiveScript.js"></script>
+             
+       </head>
+       <body>
+           
+        <form name="myForm" ng-controller="inputRangeController">
+
+            Model as range: <input type="range" name="range" ng-model="value" min="{{min}}"  max="{{max}}">
+            <hr>
+            Model as number: <input type="number" ng-model="value"><br>
+            Min: <input type="number" ng-model="min"><br>
+            Max: <input type="number" ng-model="max"><br>
+            value = <code>{{value}}</code><br/>
+            myForm.range.$valid = <code>{{myForm.range.$valid}}</code><br/>
+            myForm.range.$error = <code>{{myForm.range.$error}}</code>
+          </form>
+           
+       
+       </body>
+       </html>

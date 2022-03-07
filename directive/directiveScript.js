@@ -128,3 +128,52 @@ myApp.controller('inputRadioController', ['$scope', function($scope) {
     };
 
 }]);
+
+
+//controller for inputRangeController
+myApp.controller('inputRangeController', ['$scope', function($scope) {
+
+    $scope.value = 75;
+    $scope.min = 10;
+    $scope.max = 90;
+
+  }]);
+
+
+//controller for inputTextController
+myApp.controller('inputTextController', ['$scope', function($scope) {
+    $scope.example = {
+      text: 'guest',
+      word: /^\s*\w*\s*$/
+    };
+  }]);
+
+
+  //controller for inputTimeController
+  myApp.controller('inputTimeController', ['$scope', function($scope) {
+    
+    $scope.example = {
+      value: new Date(1970, 0, 1, 14, 57, 0)
+    };
+
+  }]);
+
+
+  //controller for inputUrlController
+  myApp.controller('inputUrlController', ['$scope', function($scope) {
+
+    $scope.url = {
+      text: 'http://google.com'
+    };
+
+  }]);
+
+
+  //controller for inputWeekController
+  myApp.controller('inputWeekController', ['$scope', function($scope) {
+
+    $scope.example = {
+      value: new Date(2013, 0, 3)
+    };
+    
+  }]);

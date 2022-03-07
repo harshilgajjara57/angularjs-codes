@@ -1,10 +1,5 @@
 directives
 
-input[range]
-input[text]
-input[time]
-input[url]
-input[week]
 ngApp
 ngBindHtml
 ngBindTemplate

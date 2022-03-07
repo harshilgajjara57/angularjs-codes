@@ -1,0 +1,58 @@
+    <!-- directive : input[week] -->
+
+    <!-- 
+    Input with week-of-the-year validation and transformation to Date. In browsers that do not yet support the HTML5 week input, a text element will be used. In that case, the text must be entered in a valid ISO-8601 week format (yyyy-W##), for example: 2013-W02.
+
+The model must always be a Date object, otherwise AngularJS will throw an error. Invalid Date objects (dates whose getTime() is NaN) will be rendered as an empty string.
+
+The value of the resulting Date object will be set to Thursday at 00:00:00 of the requested week, due to ISO-8601 week numbering standards. Information on ISO's system for numbering the weeks of the year can be found at: https://en.wikipedia.org/wiki/ISO_8601#Week_dates
+
+The timezone to be used to read/write the Date instance in the model can be defined using ngModelOptions. By default, this is the timezone of the browser. -->
+
+<!-- usage : <input type="week"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en" ng-app="directives">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>directive : input[week] </title>
+     <script src="../script/angular.min.js"></script>
+     <script src="directiveScript.js"></script>
+       
+ </head>
+ <body>
+     
+    <form name="myForm" ng-controller="inputWeekController as dateCtrl">
+        <label>Pick a date between in 2013:
+          <input id="exampleInput" type="week" name="input" ng-model="example.value"
+                 placeholder="YYYY-W##" min="2012-W32"
+                 max="2013-W52" required />
+        </label>
+        <div role="alert">
+          <span class="error" ng-show="myForm.input.$error.required">
+              Required!</span>
+          <span class="error" ng-show="myForm.input.$error.week">
+              Not a valid date!</span>
+        </div>
+        <p>value = {{example.value | date: "yyyy-Www"}}</p><br/>
+        <p>myForm.input.$valid = {{myForm.input.$valid}}</p><br/>
+        <p>myForm.input.$error = {{myForm.input.$error}}</p><br/>
+        <p>myForm.$valid = {{myForm.$valid}}</p><br/>
+        <p>myForm.$error.required = {{!!myForm.$error.required}}</p><br/>
+      </form>
+     
+ 
+ </body>
+ </html>
