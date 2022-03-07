@@ -15,12 +15,9 @@ input[time]
 input[url]
 input[week]
 ngApp
-ngBind
 ngBindHtml
 ngBindTemplate
 ngBlur
-ngChange
-ngChecked
 ngClass
 ngClassEven
 ngClassOdd
@@ -36,7 +33,6 @@ ngForm
 ngHref
 ngIf
 ngInclude
-ngInit
 ngJq
 ngList
 ngMaxlength
